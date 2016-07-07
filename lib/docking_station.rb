@@ -2,18 +2,24 @@
 class DockingStation
 
 
+  attr_reader :bike
+
+
+
 def release_bike
-  Bike.new
+  @bike
 end
 
 def dock(bike)
 
-@bike = bike
+  @bike = bike
 
 end
 
-def bike
-@bike
+def empty?
+
+  fail "No bikes available"
+
 end
 
 end
