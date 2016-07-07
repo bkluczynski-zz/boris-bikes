@@ -12,9 +12,8 @@ def release_bike
 end
 
 def dock(bike)
-
+  raise "Station full - come back later" if @bike
   @bike = bike
-
 end
 
 end
