@@ -11,13 +11,14 @@ describe DockingStation do
   end
 
   it 'expecting to tell whether the bike is docked' do
-    expect(subject).to respond_to(:bike)
+    expect(subject).to respond_to(:dock)
   end
 
   describe '#dock' do
     it 'raises an error when full' do
-      bike = Bike.new
-      subject.dock(bike)
+      #bike = Bike.new
+      #subject.dock(bike)
+      20.times { subject.dock Bike.new }
       expect{subject.dock(Bike.new)}.to raise_error "Station full - come back later"
     end
   end
