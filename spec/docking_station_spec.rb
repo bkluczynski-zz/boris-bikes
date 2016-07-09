@@ -22,7 +22,7 @@ describe DockingStation do
     # Again, we need to return the bike we just docked
     bike = Bike.new
     subject.dock(bike)
-    expect(subject.bikes).to eq [bike]
+    expect(subject.working_bikes).to eq [bike]
   end
 
   describe '#release_bike' do

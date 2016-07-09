@@ -20,9 +20,10 @@ class DockingStation
 
   def dock(bike)
     fail "Sorry, Docking station full" if full?
-    bikes << bike
     if !bike.broken?
     working_bikes << bike
+    else
+    bikes << bike
     end
     bike
   end
@@ -36,7 +37,7 @@ private
 
 private
   def full?
-    bikes.count >= capacity
+    bikes.count + working_bikes.count >= capacity
   end
 
 end #end class
