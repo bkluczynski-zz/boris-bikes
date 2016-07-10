@@ -13,7 +13,7 @@ class DockingStation
   end
 
   def release_bike
-    raise "Sorry, there are no bikes" if empty?
+    fail "Sorry, there are no bikes" if empty?
     working_bikes.pop
   end
 
